@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Clash Display', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+header {
+    background-color: #1d1d1d;
+    width: 100%;
+    padding: 10px;
+
+}
+.parallax {
+    background-image: url('img/elementos/edición-foto-fondo-v_03.png'); 
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sección {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-top: 40px;
+    margin-bottom: 10%;
+    background-color: #1D1D1D;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10%;
+    padding-left: 5%;
+}
+
+.sobremi {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+article {
+    margin-bottom: 10%;
+}
+
+.con-linea {
+    border-bottom: 1px solid white;
+    padding-bottom: 10%;
+}
+
+.descripción {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+
+.descripción p{
+    width: 90%;
+}
+
+.img-planetas {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+
+.img-articulos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flecha {
+    max-width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.flecha.rotada {
+    transform: rotate(180deg);
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%; 
+    max-width: 1200px; 
+    aspect-ratio: 3 / 2; 
+    margin: 0 auto; 
+}
+
+.iframe-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: none;
+}
+
+footer {
+    background-color: #1D1D1D;
+    width: 100%;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 0.5;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 0.2;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.sección article {
+    display: none;
+}
+
+.sección.activa article {
+    display: block;
+}
+
+a {
+    color: white;
+    font-weight: 500;
+}
+
+#sobremi-descrip {
+    font-size: 1.5rem;
+}
+
+.imagen-cambiable {
+  width: 100%;
+  aspect-ratio: 1200 / 650;
+  background-image: url('img/proyectos identidad/google-doodle2.png');
+  background-size: contain; /* muestra toda la imagen */
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+/* Escritorio: hover cambia a imagen B */
+@media (hover: hover) and (pointer: fine) {
+  .imagen-cambiable:hover {
+    background-image: url('img/proyectos identidad/google-doodle1.png');
+  }
+}
+
+/* Móviles: alterna imagen A y B constantemente */
+@media (hover: none) and (pointer: coarse) {
+  .imagen-cambiable {
+    animation: cambiarImagenes 4s infinite;
+  }
+}
+
+@keyframes cambiarImagenes {
+  0%, 49% {
+    background-image: url('img/proyectos identidad/google-doodle1.png');
+  }
+  50%, 100% {
+    background-image: url('img/proyectos identidad/google-doodle2.png');
+  }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+    
+    h4 {
+        font-size: 1.5rem;
+    }
+    
+    .img-planetas {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .sección {
+        padding-top: 20px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    h3 {
+        font-size: 1.8rem;
+    }
+    
+    .img-articulos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-articulos img {
+        padding-bottom: 10px;
+    }
+    
+    .descripción {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+    
+    .flecha {
+        max-width: 30px;
+        padding-bottom: 20px;
+    }
+
+    img {
+        padding-top: 10px;
+    }
+}
