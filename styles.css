@@ -46,6 +46,16 @@ header {
     padding-left: 5%;
 }
 
+.bloque {
+  transition: background-color 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.bloque:hover {
+  background-color: #202020;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 1); 
+  transform: translateY(-5px);
+}
+
 .sobremi {
     padding-top: 10%;
     padding-bottom: 10%;
