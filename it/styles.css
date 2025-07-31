@@ -16,6 +16,18 @@ header {
     padding: 10px;
 
 }
+
+.div-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.languages {
+    display: flex;
+    justify-content: space-between;
+    gap: 25%;
+}
+
 .parallax {
     background-image: url('img/elementos/edición-foto-fondo-v_03.png'); 
     min-height: 100vh;
